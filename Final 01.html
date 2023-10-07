@@ -1,0 +1,13 @@
+<script>
+    let custo_fabrica = Number(prompt('Digite o custo do carro'));
+    let distribuidor = 0.28;
+    let imposto = 0.45;
+
+    let custo_distribuidor = custo_fabrica * distribuidor;
+    let custo_imposto = custo_fabrica * imposto;
+    let valor_final_carro = custo_fabrica + custo_distribuidor + custo_imposto;
+
+    alert('O valor final do carro é de R$ ' + valor_final_carro.toFixed(2));
+
+
+</script>

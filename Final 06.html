@@ -1,0 +1,34 @@
+<script>
+let maiorAltura = 0;
+let menorAltura = Infinity;
+let somaPesos = 0;
+let contadorPessoas = 0;
+
+while (true) {
+  let peso = parseFloat(prompt("Digite o peso da pessoa (0 para encerrar):"));
+
+  if (peso === 0) {
+    break;
+  }
+
+  let altura = parseFloat(prompt("Digite a altura da pessoa em metros:"));
+
+  if (altura > maiorAltura) {
+    maiorAltura = altura;
+  }
+
+  if (altura < menorAltura) {
+    menorAltura = altura;
+  }
+
+  somaPesos += peso;
+  contadorPessoas++;
+}
+
+let mediaPesos = somaPesos / contadorPessoas;
+
+alert("Maior altura informada: " + maiorAltura + " metros");
+alert("Menor altura informada: " + menorAltura + " metros");
+alert("Média dos pesos informados: " + mediaPesos.toFixed(2) + " kg");
+
+</script>

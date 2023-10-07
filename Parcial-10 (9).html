@@ -1,0 +1,23 @@
+<script>
+let consumo = Number(window.prompt("Digite o valor do seu consumo"));
+
+let valor1 = 1.25;
+let valor2 = 1.50;
+let valor3 = 1.75;
+let valor4 = 2.00;
+
+let valorConta;
+
+if (consumo <= 300) {
+    valorConta = consumo * valor1;
+} else if (consumo <= 600) {
+    valorConta = consumo * valor2;
+} else if (consumo <= 1000) {
+    valorConta = consumo * valor3;
+} else {
+    valorConta = consumo * valor4;
+}   
+
+alert("O valor da conta é: R$ " + valorConta.toFixed(2));
+
+</script>

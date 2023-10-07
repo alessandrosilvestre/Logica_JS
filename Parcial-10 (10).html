@@ -1,0 +1,38 @@
+<script>
+let nome_do_vinho = "";
+let preco_do_vinho = 0;
+let tipo_do_vinho = "";
+
+while (true) {
+    let vinho = window.prompt("Digite o nome do vinho ou 'FIM' para encerrar");
+    if (vinho === "FIM") {
+        break;
+    } else {
+        nome_do_vinho = vinho;
+    }
+
+    let preco = window.prompt("Digite o preço do vinho");
+    if (preco === "FIM") {
+        break;
+    } else {
+        preco_do_vinho = parseFloat(preco);
+    }
+
+    let tipo = window.prompt("Digite o tipo do vinho");
+    if (tipo === "FIM") {
+        break;
+    } else {
+        tipo_do_vinho = tipo;
+    }
+}
+
+alert("Nome do vinho: " + nome_do_vinho);
+alert("Preço do vinho: " + preco_do_vinho);
+alert("Tipo do vinho: " + tipo_do_vinho);
+
+
+//tentei procurar aquela aula que vc passou o código, mas não achei. Não consegui finalizar esse exercício.
+
+ 
+
+</script>

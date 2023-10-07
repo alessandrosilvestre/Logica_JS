@@ -1,0 +1,15 @@
+<script>
+    let salario = Number(prompt("Digite o salário do funcionário?"));
+    let qtd_carros_vendidos = Number(prompt("Digite a quantidade de carros vendidos?"));
+    let total_carros_vendidos = Number(prompt("Digite o valor total de carros vendidos?"));
+    let valor_UN_carros_vendidos = Number(prompt("Digite o valor unitário de cada carro vendido?"));
+    
+    let comissao = 0.05 * qtd_carros_vendidos;
+
+    let salario_final = salario + comissao + (total_carros_vendidos * valor_UN_carros_vendidos);
+    
+    alert("O valor final do funcionário é de R$ " + salario_final.toFixed(2));
+    
+
+
+</script>

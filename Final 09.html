@@ -1,0 +1,47 @@
+<script>
+    let alturas = [];
+let sexos = [];
+let maiorAltura = 0;
+let somaAlturasMulheres = 0;
+let quantidadeHomens = 0;
+let menorAlturaHomens = Infinity;
+
+do {
+  let altura = parseFloat(prompt("Digite a altura (em metros) ou 0 para encerrar:"));
+
+  if (altura === 0) {
+    break; 
+  }
+
+  let sexo = prompt("Digite o sexo (H para homem ou M para mulher):").toLowerCase();
+
+  if (sexo !== "h" && sexo !== "m") {
+    alert("Sexo inválido. Digite 'H' para homem ou 'M' para mulher.");
+    continue; 
+  }
+
+  alturas.push(altura);
+  sexos.push(sexo);
+
+  if (altura > maiorAltura) {
+    maiorAltura = altura;
+  }
+
+  if (sexo === "m") {
+    somaAlturasMulheres += altura;
+  } else if (sexo === "h") {
+    quantidadeHomens++;
+    if (altura < menorAlturaHomens) {
+      menorAlturaHomens = altura;
+    }
+  }
+} while (true);
+
+let mediaAlturasMulheres = somaAlturasMulheres / (sexos.filter(s => s === "m").length);
+
+alert("A maior altura informada é: " + maiorAltura.toFixed(2) + " metros.");
+alert("A média das alturas das mulheres é: " + mediaAlturasMulheres.toFixed(2) + " metros.");
+alert("A quantidade de homens é: " + quantidadeHomens);
+alert("A menor altura dos homens é: " + menorAlturaHomens.toFixed(2) + " metros.");
+
+</script>

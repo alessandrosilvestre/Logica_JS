@@ -1,0 +1,25 @@
+<script>
+    let nomes = []
+
+    for( let i = 0; i < 10; i++){
+        let nome = prompt("Digite o nome")
+        nomes.push(nome);
+    }
+    alert("Os nomes são: " + nomes)
+
+    let procurar_nome = prompt("Qual nome deseja encontrar?");
+    let achei = false;
+
+    for(let i = 0; i < nomes.length; i++){
+        if(nomes[i] === procurar_nome){
+            achei = true;
+            break;
+        }
+    }
+    if (achei){
+        alert("Achei" + procurar_nome)
+    }else{
+        alert("Nao achei")
+    }
+    
+    </script>

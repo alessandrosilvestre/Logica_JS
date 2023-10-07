@@ -1,0 +1,14 @@
+
+<script>
+    let qtd_atual = Number(window.prompt("Digite a quantidade atual do estoque"));
+    let qtd_maxima = Number(window.prompt("Digite a quantidade máxima do estoque"));
+    let qtd_minima = Number(window.prompt("Digite a quantidade mínima em estoque"));
+    
+    let qtd_media = (qtd_maxima + qtd_minima) / 2;
+
+    if (qtd_atual >= qtd_media) {
+        alert("Não efetuar compra");
+    } else {
+        alert("Efetuar compra");
+    }
+</script>
